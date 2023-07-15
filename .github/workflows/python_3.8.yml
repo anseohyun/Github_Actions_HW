@@ -20,7 +20,7 @@ jobs:
 
     - name: Run Python 3.8 script and save output
       run: |
-        python main.py > output-3.8.txt
+        "Hello world" > output-3.8.txt
 
     - name: Save output as artifact
       uses: actions/upload-artifact@v2
