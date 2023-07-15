@@ -20,7 +20,7 @@ jobs:
 
     - name: Run Python script and save output
       run: |
-        python main.py > output.txt
+        python main.py > input.txt
 
     - name: Save output as artifact
       uses: actions/upload-artifact@v2
