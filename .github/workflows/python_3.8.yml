@@ -19,8 +19,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Run Python 3.8 script and save output
-      run: |
-        "Hello world" > output-3.8.txt
+      run: python -c "import sys; print(sys.version)"
 
     - name: Save output as artifact
       uses: actions/upload-artifact@v2
