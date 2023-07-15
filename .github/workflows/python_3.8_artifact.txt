@@ -1,0 +1,28 @@
+name: Python Actions
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Run Python 3.8 script and save output
+      run: python -c "import sys; print(sys.version)"
+
+    - name: Save output as artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: python_3.8
+        path: .github/workflows/python_3.8.yml
